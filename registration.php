@@ -1,5 +1,12 @@
 <?php
-
+    if(isset($_POST['submit']))
+    {
+        $first_name = $_POST['fname'];
+        $last_name = $_POST['lname'];
+        $date = $_POST['date'];
+        $email = $_POST['email'];
+        $password = $_POST['pass'];
+    }
 
 ?>
 
