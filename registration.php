@@ -48,6 +48,12 @@
     <h1>Register Below</h1>
 
     <form method = "post">
+        <?php
+            if(isset($error))
+                {
+                    echo "<i>Error: ".$error."</i><br><br>";
+                }
+            ?>
     First Name:
         <input type ="text" name = "fname" placeholder = "Enter First Name"><br><br>
     Last Name:
@@ -59,6 +65,6 @@
     Password:
         <input type ="text" name="pass" placeholder ="Enter desired password"><br><br>
     <input type ="submit" name ="submit" value ="Registration">
-    </form>"
+    </form>
 </body>
 </html>
