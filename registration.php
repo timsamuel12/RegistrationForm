@@ -6,6 +6,34 @@
         $date = $_POST['date'];
         $email = $_POST['email'];
         $password = $_POST['pass'];
+     if($first_name == '')
+     {
+         $error = "First Name is required";
+     }
+     else if($last_name == '')
+     {
+         $error = "Last name is required";
+     }
+     else if($date == '')
+     {
+         $error = "Please enter valid date";
+     }
+     else if($email == '')
+     {
+         $error = "Enter a valid email";
+     }
+     else if(!filtervar($email, FILTER_VALIDATE_EMAIL))
+     {
+         $error = "<b>$email</b> is not a valid email address";
+     }
+     else if($password == '')
+     {
+         $error = "Password is required";
+     }
+     else if(strlen($password)<8)
+     {
+         $error = "Minimum password length is 8 characters.";
+     }
     }
 
 ?>
